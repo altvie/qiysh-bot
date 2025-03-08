@@ -14,31 +14,8 @@ export class UserEvent extends Listener {
 	}
 
 	run() {
-		// this.printBanner();
 		this.printStoreDebugInformation();
 	}
-
-// 	printBanner() {
-// 		const success = green('+');
-
-// 		const llc = dev ? magentaBright : white;
-// 		const blc = dev ? magenta : blue;
-
-// 		const line01 = llc('');
-// 		const line02 = llc('');
-// 		const line03 = llc('');
-
-// 		// Offset Pad
-// 		const pad = ' '.repeat(7);
-
-// 		console.log(
-// 			String.raw`
-// ${line01} ${pad}${blc('1.0.0')}
-// ${line02} ${pad}[${success}] Gateway
-// ${line03}${dev ? ` ${pad}${blc('<')}${llc('/')}${blc('>')} ${llc('DEVELOPMENT MODE')}` : ''}
-// 		`.trim()
-// 		);
-// 	}
 
 	printStoreDebugInformation() {
 		const { client, logger } = this.container;
