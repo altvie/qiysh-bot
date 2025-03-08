@@ -1,5 +1,6 @@
 import { Listener } from '@sapphire/framework';
 import { blue, gray, green, magenta, magentaBright, white, yellow } from 'colorette';
+import { ActivityType } from 'discord.js';
 
 const dev = process.env.NODE_ENV !== 'production';
 
@@ -15,6 +16,17 @@ export class UserEvent extends Listener {
 
 	run() {
 		this.printStoreDebugInformation();
+
+		const client = this.container.client;
+		client.user.setPresence({
+			activities: [
+				{ 
+					name: 'type /help', 
+					type: ActivityType.Watching 
+				}
+			],
+			status: 'online',
+		});
 	}
 
 	printStoreDebugInformation() {

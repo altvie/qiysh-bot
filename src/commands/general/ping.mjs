@@ -22,9 +22,9 @@ export class PingCommand extends Command {
     if (isMessageInstance(msg)) {
       const diff = msg.createdTimestamp - interaction.createdTimestamp;
       const ping = Math.round(this.container.client.ws.ping);
-      return interaction.editReply(`🏓 | Pong! - Round trip took: **${diff}ms**. Heartbeat: **${ping}ms**.`);
+      return interaction.editReply(`🏓 **|** Pong! - Round trip took: **${diff}ms**. Heartbeat: **${ping}ms**.`);
     }
 
-    return interaction.editReply('⚠️ | Something went wrong while pinging the bot.');
+    return interaction.editReply('⛔ **|** Something went wrong while pinging the bot.');
   }
 }

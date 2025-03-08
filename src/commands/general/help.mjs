@@ -36,7 +36,7 @@ export class HelpCommand extends Command {
 
       await interaction.reply({ embeds: [embed], ephemeral: true });
     } catch (error) {
-      await interaction.reply({ content: '⚠️ An error occurred while fetching the command list.', ephemeral: true });
+      await interaction.reply({ content: '⛔ **|** An error occurred while fetching the command list.', ephemeral: true });
     }
   }
 }

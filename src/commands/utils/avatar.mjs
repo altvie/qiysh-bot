@@ -35,7 +35,7 @@ export class AvatarCommand extends Command {
   
       await interaction.reply({ embeds: [embed] });
     } catch (error) {
-      await interaction.reply({ content: '⚠️ An error occurred while fetching the avatar.', ephemeral: true });
+      await interaction.reply({ content: '⛔ **|** An error occurred while fetching the avatar.', ephemeral: true });
     }
   }
 }

@@ -61,7 +61,7 @@ export class CryptoCommand extends Command {
       await interaction.reply({ embeds: [embed] });
     } catch (error) {
       this.container.logger.error(`Coin not found: ${coin}`);
-      await interaction.reply({ content: '⚠️ An error occurred while fetching data.', ephemeral: true });
+      await interaction.reply({ content: `⛔ **|** Coin not found: **${coin}**`, ephemeral: true });
     }
   }
 }
